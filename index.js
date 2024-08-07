@@ -23,7 +23,7 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
 app.get('/',async(req,resp)=>{
-    resp.send("welcome to Roamrover")
+    resp.send("welcome to Roamrover, Backend is Running")
 })
 
 app.post('/api/package', upload.single('image'), async (req, res) => {
