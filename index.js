@@ -22,6 +22,10 @@ cloudinary.config({
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
+app.get('/',async(req,resp)=>{
+    resp.send("welcome to Roamrover")
+})
+
 app.post('/api/package', upload.single('image'), async (req, res) => {
     try {
         const { name, price, date, details } = req.body;
